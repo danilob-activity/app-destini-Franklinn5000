@@ -16,21 +16,49 @@ public class MainActivity extends AppCompatActivity {
 
     //indice corrente da historia
     private Story mStorySelected;
+    private int mStoryIndex;
+    private android.os.Bundle outState;
+
+    Answer mT1_Ans1 = new Answer(R.string.T1_Ans1);
+    Answer mT2_Ans2 = new Answer(R.string.T1_Ans2);
+
+
+    Story mt1 = new Story(R.string.T1_Story);
+    Story mt2 = new Story(R.string.T2_Story);
+    Story mt3 = new Story(R.string.T3_Story);
+
+    Story mt4 = new Story(R.string.T4_End);
+    Story mt5 = new Story(R.string.T5_End);
+    Story mt6 = new Story(R.string.T6_End);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //TODO: Faça o link do layout com a activity
-
-        //TODO:faça o mapeamento da história
-
-        // TODO: Coloque o evento do click do botão, caso precise colocar a visibilidade no botão invisivel utilize a função
-        // do botão setVisibility(View.GONE):
+        
+        {
+            super.onSaveInstanceState(outState);
+            putInt("StoryKey",mStoryIndex);
+        }
 
 
+            //TODO: Faça o link do layout com a activity
+        mStoryTextView = findViewById(R.id.storyTextView);
+        mAnswerTop = findViewById(R.id.AnswerTop);
+        mAnswerBottom = findViewById(R.id.AnswerBottom);
+
+            //TODO:faça o mapeamento da história
+
+            // TODO: Coloque o evento do click do botão, caso precise colocar a visibilidade no botão invisivel utilize a função
+            // do botão setVisibility(View.GONE):
+
+
+        }
+
+    private void putInt(String storyKey, int storyIndex) {
     }
 
 }
