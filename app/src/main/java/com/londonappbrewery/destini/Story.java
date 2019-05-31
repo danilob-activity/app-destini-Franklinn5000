@@ -1,10 +1,12 @@
 package com.londonappbrewery.destini;
 
+import java.io.Serializable;
+
 /**
  * Created by danilo on 09/02/18.
  */
 
-public class Story {
+public class Story implements Serializable{
     private int mStoryID;
     Answer mAnswerTop;
     Answer mAnswerBottom;
@@ -18,6 +20,7 @@ public class Story {
     public Story (int id){
         mStoryID = id;
     }
+
 
     public int getStoryID() {
         return mStoryID;

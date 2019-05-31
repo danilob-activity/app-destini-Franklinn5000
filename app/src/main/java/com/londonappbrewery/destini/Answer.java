@@ -25,7 +25,6 @@ public class Answer {
         mAnswerID = answerID;
     }
 
-
     public Story getChildStory() {
         return mChildStory;
     }
